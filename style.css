@@ -1,0 +1,45 @@
+:root {
+  --primary-dark: #021621;
+  --primary-green: #10b981;
+}
+body {
+  background-color: var(--primary-dark);
+}
+
+.container {
+  color: var(--primary-green);
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary-green);
+  text-align: center;
+  font-size: 3rem;
+}
+
+input,
+label {
+  display: block;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+input {
+  width: 100%;
+  border-radius: 1em;
+}
+label {
+  font-size: large;
+}
+#check-number {
+  padding: 0.3rem;
+  margin: 0.3rem;
+  background-color: var(--primary-dark);
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+  border-radius: 1em;
+}
+#message-shown {
+  font-size: x-large;
+}

@@ -1,19 +1,24 @@
 const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNumber = document.querySelector("#lucky-number");
 const checkNumberButton = document.querySelector("#check-number");
+const message = document.querySelector("#message-shown");
 
 function compareValue(sum, luckyNumber) {
   if (sum % luckyNumber === 0) {
-    console.log(luckyNumber, "is lucky number🥳🥳");
+    message.innerText = luckyNumber + " is lucky number🥳🥳";
   } else {
-    console.log(luckyNumber, "is not that lucky☹️☹️");
+    message.innerText = luckyNumber + " is not that lucky☹️☹️";
   }
 }
 
 function checkBirthDayIsLucky() {
   const dob = dateOfBirth.value;
   const sum = calculateSum(dob);
-  compareValue(sum, luckyNumber.value);
+  if (dob && luckyNumber.value) {
+    compareValue(sum, luckyNumber.value);
+  } else {
+    message.innerText = "Please enter both the fields😡😡";
+  }
 }
 function calculateSum(dob) {
   dob = dob.replaceAll("-", "");
